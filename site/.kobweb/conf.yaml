@@ -1,0 +1,14 @@
+site:
+  title: "vidyadaan"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/developmentExecutable/vidyadaan.js"
+      api: "build/libs/vidyadaan.jar"
+    prod:
+      script: "build/distributions/vidyadaan.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
