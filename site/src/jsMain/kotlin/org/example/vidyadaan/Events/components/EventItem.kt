@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.components.layout.breakpoint.displayUntil
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import org.example.vidyadaan.EventDetails.style.RegButtonStyle
 import org.example.vidyadaan.Events.BasicDetails
 import org.example.vidyadaan.Events.EventDetails
 import org.example.vidyadaan.Events.styles.Eventcardstyle
@@ -30,7 +31,7 @@ import org.jetbrains.compose.web.dom.Button
 @Composable
 fun LeftPart( details: BasicDetails ) {
     Box(Leftcardstyle.toModifier()) {
-        Column(Modifier.fillMaxSize(),
+        Column(Modifier.fillMaxSize().color(Colors.White),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center) {
             SpanText(text = details.date ,
@@ -56,7 +57,7 @@ fun RightPart(ctx: PageContext, event: EventDetails, year: Int, index: Int) {
                     .fontFamily("poppins")
                     .fontSize(FontSize.Large)
                     .fontWeight(FontWeight.Bold))
-            SpanText(text = event.description ,
+            SpanText(text = event.subtitle ,
                     modifier = Modifier
                     .fontFamily("poppins")
                     .fontSize(FontSize.Medium))
@@ -65,7 +66,7 @@ fun RightPart(ctx: PageContext, event: EventDetails, year: Int, index: Int) {
                 verticalAlignment = Alignment.Bottom ,
                 horizontalArrangement = Arrangement.End) {
                 Button(
-                    attrs = Modifier
+                    attrs = RegButtonStyle.toModifier()
                         .height(30.px)
                         .borderRadius(10.px)
                         .onClick { ctx.router.navigateTo("/EventDetails/$year/$index") }

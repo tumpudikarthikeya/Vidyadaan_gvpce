@@ -9,6 +9,7 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.FlexWrap
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.rgb
 
 val Eventcardstyle by ComponentStyle {
     Breakpoint.ZERO {
@@ -22,16 +23,18 @@ val Eventcardstyle by ComponentStyle {
 
 }
 val Leftcardstyle by ComponentStyle {
+    base {
+        Modifier
+            .backgroundColor(rgb(72, 22, 148))
+    }
     Breakpoint.ZERO{
         Modifier.height(100.px)
             .fillMaxWidth()
-            .backgroundColor(Colors.Yellow)
 
     }
     Breakpoint.MD{
         Modifier.height(185.px)
             .fillMaxWidth(40.percent)
-            .backgroundColor(Colors.Green)
 
     }
 }

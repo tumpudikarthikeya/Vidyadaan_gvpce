@@ -1,0 +1,24 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_13_480)">
+<rect width="1080" height="1080" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M673.084 13.4269C631.393 -18.6912 598.609 -65.6733 547.976 -80.0275C497.28 -94.3997 443.276 -53.1021 392.234 -66.193C301.756 -89.3981 234.806 -188.432 141.492 -184.279C57.3991 -180.538 -23.7036 -118.352 -66.3639 -45.7869C-109.152 26.9957 -74.1412 120.416 -86.7173 203.902C-99.1578 286.488 -161.167 364.929 -140.419 445.829C-119.687 526.666 -25.092 563.664 23.0337 631.844C74.5692 704.854 69.2996 833.301 153.74 862.563C243.824 893.781 325.788 775.104 420.978 769.75C502.534 765.162 589.161 883.31 654.576 834.39C731.732 776.688 643.242 623.668 709.651 553.866C773.263 487.004 953.467 584.521 977.158 495.326C1002.59 399.559 826.07 363.337 784.1 273.577C761.062 224.309 819.652 162.845 798.304 112.821C777.157 63.265 715.766 46.3088 673.084 13.4269Z" fill="url(#paint0_radial_13_480)"/>
+<g filter="url(#filter0_b_13_480)">
+<rect width="1080" height="1080" fill="white" fill-opacity="0.3"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_b_13_480" x="-200" y="-200" width="1480" height="1480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="100"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_13_480"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_13_480" result="shape"/>
+</filter>
+<radialGradient id="paint0_radial_13_480" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(337.094 371.08) rotate(39.174) scale(579.445 668.192)">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="1" stop-color="#00FFC2"/>
+</radialGradient>
+<clipPath id="clip0_13_480">
+<rect width="1080" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>

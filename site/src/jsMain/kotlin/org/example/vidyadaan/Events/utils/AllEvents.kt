@@ -7,7 +7,7 @@ object AllEvents {
     val AllEvents :Map<Int,List<EventDetails>> = mapOf(
         2023 to listOf(
                     EventDetails( title = "Expression of Love",
-                    subtitle = "Share your mother’s day message",
+                    subtitle = mothersday.mothersday_subtitle,
                     description = mothersday.mothersday_desc,
                     intro = mothersday.mothersday_intro,
                     details = mothersday.mothersday_basicdetails,

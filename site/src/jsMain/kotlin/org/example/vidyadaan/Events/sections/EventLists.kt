@@ -12,12 +12,10 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.PageContext
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.example.vidyadaan.Events.components.EventItem
 import org.example.vidyadaan.Events.utils.AllEvents
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun eventlists(ctx : PageContext , year : Int) {
@@ -30,7 +28,7 @@ fun eventlists(ctx : PageContext , year : Int) {
 
             Box(Modifier.fillMaxSize().backgroundColor(rgba(0, 0, 0, 0.15f)))
             Column(modifier = Modifier.fillMaxSize()) {
-                EventYear()
+                EventYear(year)
             Column(Modifier.rowGap(30.px).fillMaxWidth()) {
                 for (i in 1..10) {
                     AllEvents.AllEvents[year]?.forEachIndexed { index ,item  ->
@@ -44,7 +42,7 @@ fun eventlists(ctx : PageContext , year : Int) {
 }
 
 @Composable
-fun EventYear() {
+fun EventYear(year: Int) {
     Box(modifier = Modifier.fillMaxWidth()
         .height(80.vh), contentAlignment = Alignment.Center) {
         Column(modifier = Modifier.fillMaxSize()
@@ -54,7 +52,7 @@ fun EventYear() {
                 .fontSize(FontSize.XXLarge)
                 .fontWeight(FontWeight.Bold)
             )
-            SpanText("2023",
+            SpanText("$year",
                 modifier = Modifier.fontFamily("poppins")
                     .fontSize(FontSize.XXLarge)
                     .fontWeight(FontWeight.Bold))
