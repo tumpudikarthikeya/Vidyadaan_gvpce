@@ -25,7 +25,6 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import org.example.vidyadaan.Styles.MenuItemStyle
 import org.example.vidyadaan.Styles.MenuItemStyle2
 import org.example.vidyadaan.Styles.SubMenuItemStyle2
 import org.example.vidyadaan.models.HeaderContent
@@ -34,6 +33,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.AlignItems
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+
 
 @Composable
 fun OverFlowMenu(onMenuClosed : () -> Unit) {
@@ -112,7 +112,7 @@ fun OverFlowMenu(onMenuClosed : () -> Unit) {
                 OverflowMenuWithSubMenu(item.pagename ,
                     ctx ,
                     listOf(SubMenu("2023","/events"), SubMenu("2022","/events"), SubMenu("2021","/events"))
-                    , SubMenuItemStyle2 , MenuItemStyle)
+                    , SubMenuItemStyle2  ,onMenuClosed , scope)
 
             }
         }
@@ -128,7 +128,8 @@ fun OverflowMenuWithSubMenu(
     ctx: PageContext,
     submenu: List<SubMenu>,
     SubMenuStyle: ComponentStyle,
-    MenuStyle: ComponentStyle
+    onMenuClosed: () -> Unit,
+    scope: CoroutineScope
 ) { var clicked by remember { mutableStateOf(false) }
     Column( horizontalAlignment = Alignment.CenterHorizontally ,
         modifier = Modifier.backgroundColor(if(clicked) Secondary else Primary)) {
@@ -157,7 +158,12 @@ fun OverflowMenuWithSubMenu(
                     SpanText(text = subitem.subMenu,
                         modifier = SubMenuStyle.toModifier()
                             .padding(topBottom = 8.px, leftRight = 40.px)
-                            .onClick { ctx.router.navigateTo("${subitem.path}/${subitem.subMenu}") }
+                            .onClick {
+                                ctx.router.navigateTo("${subitem.path}/${subitem.subMenu}")
+                                scope.launch {
+                                    onMenuClosed()
+                                }
+                            }
                             .fontSize(FontSize.Medium)
                             .cursor(Cursor.Pointer))
                 }
