@@ -4,9 +4,11 @@ import com.varabyte.kobweb.compose.css.AnimationIterationCount
 import com.varabyte.kobweb.compose.css.CSSAnimation
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.animation
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.opacity
 import com.varabyte.kobweb.silk.components.animation.Keyframes
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
+import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.AnimationFillMode
 import org.jetbrains.compose.web.css.AnimationTimingFunction
 import org.jetbrains.compose.web.css.percent
@@ -29,4 +31,15 @@ val FadeIn by ComponentStyle {
             , duration = 3.s
             , fillMode = AnimationFillMode.Forwards
             ))
+}
+
+val TeamContainer by ComponentStyle {
+    Breakpoint.ZERO{
+        Modifier
+            .fillMaxWidth(90.percent)
+    }
+    Breakpoint.MD {
+        Modifier
+            .fillMaxWidth(75.percent)
+    }
 }

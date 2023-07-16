@@ -32,24 +32,26 @@ import org.example.vidyadaan.models.SubMenu
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.AlignItems
 import org.jetbrains.compose.web.dom.Col
+import org.jetbrains.compose.web.dom.Nav
 
 @Composable
 fun Header(ctx: PageContext, MenuStyle:ComponentStyle, SubMenuStyle:ComponentStyle, HeaderStyle:ComponentStyle, onMenuClicked:() -> Unit) {
     Row(modifier = HeaderStyle.toModifier()
+        .overflow(Overflow.Hidden)
         .position(Position.Fixed)
         .padding(topBottom = 15.px)
-        .zIndex(3) ,
+        .zIndex(5) ,
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween) {
         Logo(ctx)
-        Row( modifier = Modifier.displayIf(Breakpoint. LG)
+        Row( modifier = Modifier.displayIf(Breakpoint. LG).margin(right = 50.px)
             , verticalAlignment = Alignment.CenterVertically) {
             RightPart(ctx,MenuStyle,SubMenuStyle)
         }
 
         FaBars(size = IconSize.LG ,
             modifier = Modifier
-                .right(20.px)
+                .margin(right = 50.px)
                 .cursor(Cursor.Pointer)
                 .color(Colors.White )
                 .displayUntil(Breakpoint.LG)
@@ -88,12 +90,13 @@ fun Logo(ctx: PageContext) {
 
 @Composable
 fun MenuWithoutSubMenu(name: String, path: String, ctx: PageContext, MenuStyle: ComponentStyle) {
-    SpanText(text = name ,
-        modifier = MenuStyle.toModifier()
-            .onClick { ctx.router.navigateTo(path) }
-            .padding(topBottom = 10.px , leftRight = 30.px)
-            .fontFamily("poppins")
-            .cursor(Cursor.Pointer))
+    Nav {
+        SpanText(text = name,
+            modifier = MenuStyle.toModifier()
+                .onClick { ctx.router.navigateTo(path) }
+                .padding(topBottom = 10.px, leftRight = 30.px)
+                .cursor(Cursor.Pointer))
+    }
 
 }
 
@@ -118,7 +121,7 @@ fun MenuWithSubMenu(
             FaCaretDown(size = IconSize.SM)
         }
             Popover(ElementTarget.PreviousSibling ,
-                modifier = Modifier.margin(top = -0.5.cssRem).zIndex(4) ,
+                modifier = Modifier.margin(top = -0.5.cssRem).zIndex(6) ,
                 keepOpenStrategy = keepOpenStrategyHover,
                 hideDelayMs = 100) {
                 Column(modifier = Modifier

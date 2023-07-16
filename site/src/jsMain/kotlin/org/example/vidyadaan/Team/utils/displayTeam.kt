@@ -10,18 +10,21 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
+import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.example.vidyadaan.Team.components.TeamCard
 import org.example.vidyadaan.Team.model.TeamDetails
-import org.example.vidyadaan.Team.model.WebTeamMembers.Karthikeya
-import org.jetbrains.compose.web.css.keywords.auto
+import org.example.vidyadaan.Team.styles.TeamContainer
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgb
+import org.jetbrains.compose.web.css.rgba
 
 @Composable
 fun displayTeam(year : Any , team : List<TeamDetails> = listOf()) {
 
-    Box(modifier = Modifier.margin(80.px).backgroundColor(rgb(246, 248, 255))
+    Box(modifier = TeamContainer.toModifier()
+        .margin(topBottom = 80.px)
+        .backgroundColor(rgba(247,235,253 , 0.5f))
     , contentAlignment = Alignment.Center) {
         Column( modifier = Modifier.fillMaxSize() ,horizontalAlignment = Alignment.CenterHorizontally
         ) {

@@ -10,9 +10,6 @@ import org.example.vidyadaan.Team.model.EventOrganizersMembers.Lead1
 import org.example.vidyadaan.Team.model.EventOrganizersMembers.Lead2
 import org.example.vidyadaan.Team.model.EventOrganizersMembers.Lead3
 import org.example.vidyadaan.models.Constants
-import org.example.vidyadaan.models.Constants.GITHUBURL
-import org.example.vidyadaan.models.Constants.INSTAURL
-import org.example.vidyadaan.models.Constants.LINKEDINURL
 
 object EventOrganizers {
 
@@ -34,16 +31,19 @@ object EventOrganizersMembers {
         "${path}Namratha.jpg" ,
         SocialMediaDetails(
             instaId = "${Constants.INSTAURL}/")
+        ,"Lead"
     )
     val Lead2= TeamDetails("K.Vipin" ,
         "${path}Vipin.jpg" ,
         SocialMediaDetails(
             instaId = "${Constants.INSTAURL}/")
+        ,"Lead"
     )
     val Lead3= TeamDetails("P.Yogeshwar Rao" ,
-        "${path}" ,
+        "${path}YogeshWarRao.jpg" ,
         SocialMediaDetails(
             instaId = "${Constants.INSTAURL}/")
+        ,"Lead"
     )
     val Coordinator1 =TeamDetails("Ch.Sai Jaswanth" ,
         "${path}Jaswanth.jpg" ,

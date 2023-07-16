@@ -2,7 +2,8 @@
 
 package org.example.vidyadaan.Team.styles
 
-import com.varabyte.kobweb.compose.css.AnimationIterationCount
+import com.example.compose.Secondary
+import com.example.compose.White_Color
 import com.varabyte.kobweb.compose.css.CSSAnimation
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Visibility
@@ -10,9 +11,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.animation.Keyframes
-import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
-import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.hover
 import org.jetbrains.compose.web.ExperimentalComposeWebApi
 import org.jetbrains.compose.web.css.*
@@ -100,14 +99,14 @@ val socialLinksStyle by ComponentStyle {
         Modifier
             .padding(10.px)
             .border(2.px)
-            .borderColor(Colors.White)
+            .borderColor(White_Color)
             .borderStyle(LineStyle.Solid)
     }
 
     hover{
             Modifier
-                .borderColor(rgb(50, 10, 114))
-                .backgroundColor(rgb(50, 10, 114))
+                .borderColor(Secondary)
+                .backgroundColor(Secondary)
                 .borderRadius(topRight = 5.px , bottomLeft = 5.px)
 
         }

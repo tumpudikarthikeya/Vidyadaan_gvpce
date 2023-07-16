@@ -1,6 +1,7 @@
 package org.example.vidyadaan.EventDetails.sections
 
 import androidx.compose.runtime.Composable
+import com.example.compose.Secondary
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -19,17 +20,14 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.example.vidyadaan.EventDetails.style.PosterStyle
-import org.jetbrains.compose.web.css.percent
-import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
-import org.jetbrains.compose.web.css.vh
+import org.jetbrains.compose.web.css.*
 
 @Composable
 fun EventPoster(  poster :String  , title :String) {
 
-    Box (modifier = Modifier.fillMaxWidth().height(90.vh).backgroundColor(rgb(41, 62, 70))
+    Box (modifier = Modifier.fillMaxWidth().height(90.vh).backgroundColor(Secondary)
     , contentAlignment = Alignment.Center) {
-            /*SimpleGrid(numColumns = numColumns(base = 1, sm = 2), modifier = Modifier.fillMaxWidth(75.percent).backgroundColor(
+           /* SimpleGrid(numColumns = numColumns(base = 1, sm = 2), modifier = Modifier.fillMaxWidth(75.percent).backgroundColor(
                 Colors.Yellow)) {
                 Image(src = "/$poster", modifier = PosterStyle.toModifier().borderRadius(2.px))
                 SpanText(
@@ -47,7 +45,7 @@ fun EventPoster(  poster :String  , title :String) {
             ,
             horizontalAlignment = Alignment.CenterHorizontally ,
             verticalArrangement = Arrangement.Center) {
-            Image(src = "/$poster", modifier = PosterStyle.toModifier().borderRadius(2.px))
+            Image(src = poster, modifier = PosterStyle.toModifier().borderRadius(2.px))
             SpanText(
                 text = title,
                 modifier = Modifier
@@ -63,12 +61,11 @@ fun EventPoster(  poster :String  , title :String) {
             .displayIf(Breakpoint.MD),
             verticalAlignment = Alignment.CenterVertically ,
             horizontalArrangement = Arrangement.Center) {
-            Image(src = "/$poster", modifier = PosterStyle.toModifier().borderRadius(2.px))
+            Image(src = "$poster", modifier = PosterStyle.toModifier().borderRadius(2.px).margin(50.px))
             SpanText(
                 text = title,
                 modifier = Modifier
                     .color(Colors.White)
-                    .fontFamily("poppins")
                     .fontSize(FontSize.XXLarge)
                     .fontWeight(FontWeight.SemiBold)
                     .textAlign(TextAlign.Center)
@@ -79,3 +76,13 @@ fun EventPoster(  poster :String  , title :String) {
     }
 
 }
+
+/*
+@Composable
+fun EventPoster(poster: String ) {
+    Box {
+        Image(src = "/$poster" , modifier = Modifier.height(70.vh).position(Position.Fixed))
+    }
+}
+*?
+ */

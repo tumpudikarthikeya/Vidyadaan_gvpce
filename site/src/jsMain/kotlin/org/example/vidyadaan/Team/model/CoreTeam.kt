@@ -14,20 +14,24 @@ object CoreTeamMembers {
     val path = "/TeamMembers/CoreTeam/"
 
     val President= TeamDetails("K.Sai Nirmal" ,
-        "" ,
+        "${path}Nirmal.jpg" ,
         SocialMediaDetails("${Constants.LINKEDINURL}sai-nirmal-8b7127224/",
             //"${Constants.GITHUBURL}tumpudikarthikeya",
             mail = "sainirmalkothuri@gmail.com",
-            instaId = "${Constants.INSTAURL}dead_deal013/")
+            instaId = "${Constants.INSTAURL}dead_deal013/"),
+        "President"
     )
     val Secretary= TeamDetails("M.Tanusree" ,
         "${path}Tanusree.jpg" ,
         SocialMediaDetails(
-            instaId = "${Constants.INSTAURL}tanusree_5/")
+            instaId = "${Constants.INSTAURL}tanusree_5/"),
+        "Secretary"
     )
     val Treasurer= TeamDetails("P.Tharun Venkat" ,
         "${path}Tarun.jpg" ,
         SocialMediaDetails(
-            instaId = "${Constants.INSTAURL}im____tarun/")
+            instaId = "${Constants.INSTAURL}im____tarun/"),
+        "Treasurer"
     )
+
 }

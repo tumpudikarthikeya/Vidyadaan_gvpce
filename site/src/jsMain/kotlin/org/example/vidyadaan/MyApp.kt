@@ -1,23 +1,18 @@
 package org.example.vidyadaan
 
-import androidx.compose.runtime.*
-import com.varabyte.kobweb.compose.css.CSSColor
+import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Color
-import com.varabyte.kobweb.compose.ui.graphics.Colors
-import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.styleModifier
+import com.varabyte.kobweb.compose.ui.modifiers.fontFamily
+import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.core.App
-import com.varabyte.kobweb.silk.init.InitSilk
-import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.SilkApp
-import com.varabyte.kobweb.silk.SilkStyleSheet
 import com.varabyte.kobweb.silk.components.layout.Surface
 import com.varabyte.kobweb.silk.components.style.common.SmoothColorStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
+import com.varabyte.kobweb.silk.init.InitSilk
+import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerBaseStyle
-
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.vh
 
 private val TEXT_FONT = Modifier.fontFamily("poppins")
 @InitSilk

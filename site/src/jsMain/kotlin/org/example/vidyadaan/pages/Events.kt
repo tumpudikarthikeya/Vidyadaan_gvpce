@@ -1,6 +1,8 @@
 package org.example.vidyadaan.pages
 
 import androidx.compose.runtime.*
+import com.example.compose.Pale_Purple
+import com.example.compose.Tertiary
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -14,10 +16,13 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
+import org.example.vidyadaan.Events.components.EventCard
 import org.example.vidyadaan.Events.sections.eventlists
+import org.example.vidyadaan.Events.utils.AllEvents
 import org.example.vidyadaan.Styles.HeaderBackground
 import org.example.vidyadaan.Styles.MenuItemStyle
 import org.example.vidyadaan.Styles.SubMenuItemStyle
+import org.example.vidyadaan.components.BackToTop
 import org.example.vidyadaan.components.Header
 import org.example.vidyadaan.components.OverFlowMenu
 import org.example.vidyadaan.sections.ContactInfo
@@ -28,12 +33,14 @@ fun Events() {
     var menuOpend by remember { mutableStateOf(false) }
     val ctx = rememberPageContext()
     val year  : Int = ctx.route.params.get("year")?.toInt() ?: 2023
-    Box {
-        Column(modifier = Modifier.fillMaxWidth() , horizontalAlignment = Alignment.CenterHorizontally) {
+    Box(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxWidth().backgroundColor(Tertiary) , horizontalAlignment = Alignment.CenterHorizontally) {
             Header(ctx, MenuItemStyle, SubMenuItemStyle, HeaderBackground, onMenuClicked = { menuOpend = true })
+
             eventlists(ctx, year)
             ContactInfo()
         }
+        BackToTop()
         if (menuOpend){
             OverFlowMenu(onMenuClosed = { menuOpend = false })
         }

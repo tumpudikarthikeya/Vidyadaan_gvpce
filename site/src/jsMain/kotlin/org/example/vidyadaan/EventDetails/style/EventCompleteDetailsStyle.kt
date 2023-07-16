@@ -1,5 +1,8 @@
 package org.example.vidyadaan.EventDetails.style
 
+import com.example.compose.Primary
+import com.example.compose.Secondary
+import com.example.compose.White_Color
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -47,13 +50,13 @@ val RegButtonStyle by ComponentStyle {
 
     base {
         Modifier
-            .backgroundColor(Colors.White)
-            .color(rgb(72,22,148))
+            .backgroundColor(White_Color)
+            .color(Primary)
             .transition(CSSTransition("backgroundColor" , duration = 2.s))
     }
     hover {
         Modifier
-            .backgroundColor(rgb(72,22,148))
-            .color(Colors.White)
+            .backgroundColor(Secondary)
+            .color(White_Color)
     }
 }

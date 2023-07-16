@@ -17,10 +17,10 @@ import org.jetbrains.compose.web.css.*
 
 val PosterStyle by ComponentStyle {
     Breakpoint.ZERO {
-        Modifier.size(250.px).margin(bottom = 20.px)
+        Modifier.height(250.px).margin(bottom = 20.px)
     }
     Breakpoint.MD {
-        Modifier.size(350.px).margin(bottom = 30.px)
+        Modifier.height(350.px).margin(bottom = 30.px)
     }
     hover {
         Modifier

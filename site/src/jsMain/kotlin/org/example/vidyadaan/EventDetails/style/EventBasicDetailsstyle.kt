@@ -56,7 +56,7 @@ val headingValue by ComponentStyle {
     }
     Breakpoint.MD {
         Modifier
-            .fontSize(FontSize.XLarge)
+            .fontSize(FontSize.Large)
     }
 }
 

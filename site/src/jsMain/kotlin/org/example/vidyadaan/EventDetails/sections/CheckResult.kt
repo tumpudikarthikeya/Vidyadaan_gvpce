@@ -1,6 +1,7 @@
 package org.example.vidyadaan.EventDetails.sections
 
 import androidx.compose.runtime.Composable
+import com.example.compose.Dark_Green
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.VerticalAlign
@@ -23,8 +24,7 @@ import org.jetbrains.compose.web.css.vh
 fun CheckResult() {
     Box( modifier = Modifier.margin(top = 50.vh), contentAlignment = Alignment.CenterStart) {
         Link(path = "#result" , modifier = Modifier.zIndex(1).position(Position.Fixed)) {
-            Box(contentAlignment = Alignment.Center) {
-                Image(src = "/ticket4.svg", modifier = resultStyle.toModifier())
+            Box(contentAlignment = Alignment.Center , modifier = Modifier.backgroundColor(Dark_Green)) {
                 SpanText(
                     text = "Check Results",
                     modifier = resultLinkStyle.toModifier()
@@ -48,11 +48,15 @@ val resultStyle by ComponentStyle {
 
 val resultLinkStyle by ComponentStyle {
     Breakpoint.ZERO {
-        Modifier.fontSize(FontSize.Small)
+        Modifier
+            .fontSize(FontSize.Small)
+            .padding(leftRight = 10.px , topBottom = 10.px)
+
     }
     Breakpoint.MD {
         Modifier
             .fontSize(FontSize.Medium)
-            .fontWeight(FontWeight.SemiBold)
+            .fontWeight(FontWeight.Medium)
+            .padding(leftRight = 20.px , topBottom = 15.px)
     }
 }

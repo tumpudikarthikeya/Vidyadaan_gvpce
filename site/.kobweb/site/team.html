@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <title>vidyadaan</title> 
+  <meta content="Powered by Kobweb" name="description"> 
+  <link href="/favicon.ico" rel="icon"> 
+  <meta content="width=device-width, initial-scale=1" name="viewport"> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com" rel="preconnect"> 
+  <link href="https://fonts.gstatic.com" rel="preconnect"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap" rel="stylesheet"> 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"> 
+ </head> 
+ <body> 
+  <div id="root" style="width: 100%; height: 100%; --silk-background-color: rgb(255, 255, 255); --silk-color: rgb(0, 0, 0); --silk-border-color: rgb(0, 0, 0); --silk-button-background-default-color: rgb(204, 204, 204); --silk-button-background-focus-color: rgb(100, 149, 237); --silk-button-background-hover-color: rgb(163, 163, 163); --silk-button-background-pressed-color: rgb(122, 122, 122); --silk-button-color: rgb(0, 0, 0); --silk-divider-color: rgb(0, 0, 0); --silk-link-default-color: rgb(0, 0, 255); --silk-link-visited-color: rgb(128, 0, 128); --overlay-background-color: rgba(0, 0, 0, 0.4980392156862745); --silk-surface-background-color: rgb(255, 255, 255); --silk-surface-color: rgb(0, 0, 0); --silk-switch-thumb-color: rgb(255, 255, 255); --silk-tab-color: rgb(0, 0, 0); --silk-tab-background-color: rgb(255, 255, 255); --silk-tab-border-color: rgba(0, 0, 0, 0.2); --silk-tab-disabled-background-color: rgb(255, 255, 255); --silk-tab-hover-background-color: rgb(211, 211, 211); --silk-tab-pressed-background-color: rgb(245, 245, 245); --silk-toc-border-color: rgb(0, 0, 0); --silk-tooltip-background-color: rgb(0, 0, 0); --silk-tooltip-color: rgb(255, 255, 255);">
+   <style>html, body { padding: 0px; margin: 0px; }* { box-sizing: border-box; }</style>
+   <style>.kobweb-box { display: grid; grid-template-columns: minmax(0px, 1fr); grid-template-rows: minmax(0px, 1fr); }.kobweb-box > * { grid-area: 1 / 1 / auto / auto; }.kobweb-box.kobweb-align-top-start { place-items: start; }.kobweb-box.kobweb-align-top-center { place-items: start center; }.kobweb-box.kobweb-align-top-end { place-items: start end; }.kobweb-box.kobweb-align-center-start { place-items: center start; }.kobweb-box.kobweb-align-center { place-items: center; }.kobweb-box.kobweb-align-center-end { place-items: center end; }.kobweb-box.kobweb-align-bottom-start { place-items: end start; }.kobweb-box.kobweb-align-bottom-center { place-items: end center; }.kobweb-box.kobweb-align-bottom-end { place-items: end; }.kobweb-box > .kobweb-align-top-start-self { place-self: start; }.kobweb-box > .kobweb-align-top-center-self { place-self: start center; }.kobweb-box > .kobweb-align-top-end-self { place-self: start end; }.kobweb-box > .kobweb-align-center-start-self { place-self: center start; }.kobweb-box > .kobweb-align-center-self { place-self: center; }.kobweb-box > .kobweb-align-center-end-self { place-self: center end; }.kobweb-box > .kobweb-align-bottom-start-self { place-self: end start; }.kobweb-box > .kobweb-align-bottom-center-self { place-self: end center; }.kobweb-box > .kobweb-align-bottom-end-self { place-self: end; }.kobweb-col { display: flex; flex-direction: column; }.kobweb-col.kobweb-arrange-top { justify-content: flex-start; }.kobweb-col.kobweb-arrange-center { justify-content: center; }.kobweb-col.kobweb-arrange-bottom { justify-content: flex-end; }.kobweb-col.kobweb-arrange-space-evenly { justify-content: space-evenly; }.kobweb-col.kobweb-arrange-space-between { justify-content: space-between; }.kobweb-col.kobweb-arrange-space-around { justify-content: space-around; }.kobweb-col.kobweb-align-start { align-items: flex-start; }.kobweb-col.kobweb-align-center-horiz { align-items: center; }.kobweb-col.kobweb-align-end { align-items: flex-end; }.kobweb-col > .kobweb-align-start-self { align-self: flex-start; }.kobweb-col > .kobweb-align-center-horiz-self { align-self: center; }.kobweb-col > .kobweb-align-end-self { align-self: flex-end; }.kobweb-row { display: flex; flex-direction: row; }.kobweb-row.kobweb-arrange-start { justify-content: flex-start; }.kobweb-row.kobweb-arrange-center { justify-content: center; }.kobweb-row.kobweb-arrange-end { justify-content: flex-end; }.kobweb-row.kobweb-arrange-space-evenly { justify-content: space-evenly; }.kobweb-row.kobweb-arrange-space-between { justify-content: space-between; }.kobweb-row.kobweb-arrange-space-around { justify-content: space-around; }.kobweb-row.kobweb-align-top { align-items: flex-start; }.kobweb-row.kobweb-align-center-vert { align-items: center; }.kobweb-row.kobweb-align-bottom { align-items: flex-end; }.kobweb-row > .kobweb-align-top-self { align-self: flex-start; }.kobweb-row > .kobweb-align-center-vert-self { align-self: center; }.kobweb-row > .kobweb-align-bottom-self { align-self: flex-end; }.kobweb-spacer { flex-grow: 1; }</style>
+   <style>body { font-family: poppins; }@keyframes swing {   0% { transform: rotate(0deg); }  25% { transform: rotate(10deg); }  75% { transform: rotate(-10deg); }  100% { transform: rotate(0deg); }}@keyframes swing1 {   0% { transform: rotate(0deg); }  100% { transform: rotate(360deg); }}@keyframes fade-in-animation {   0% { opacity: 0; }  100% { opacity: 1; }}@keyframes spin {   10% { transform: rotate(0deg); }  50% { transform: rotate(180deg); }  100% { transform: rotate(360deg); }}.silk-button { color: var(--silk-button-color); background-color: var(--silk-button-background-default-color); line-height: 1.2; font-size: 16px; padding: 8px 16px; border-radius: 4px; border-width: 0px; outline: 0px; user-select: none; }.silk-button:hover:not([aria-disabled="true"]) { background-color: var(--silk-button-background-hover-color); cursor: pointer; }.silk-button:focus-visible:not([aria-disabled="true"]) { box-shadow: 0px 0px 0 3px var(--silk-button-background-focus-color); }.silk-button:active:not([aria-disabled="true"]) { background-color: var(--silk-button-background-pressed-color); }.silk-disabled { opacity: 0.5; cursor: not-allowed; }.silk-divider { border-top: 1px solid var(--silk-divider-color); width: 90%; }.silk-link { text-decoration-line: none; }.silk-link:link { color: var(--silk-link-default-color); }.silk-link:visited { color: var(--silk-link-visited-color); }.silk-link:hover { text-decoration-line: underline; }.silk-overlay { background-color: var(--overlay-background-color); }.silk-popup { transition: opacity 150ms ease 0s; }.silk-simple-grid { display: grid; }.silk-smooth-color { transition: background-color 200ms ease 0s; }.silk-surface { background-color: var(--silk-surface-background-color); color: var(--silk-surface-color); }.silk-switch-track { width: var(--silk-switch-track-width); min-width: var(--silk-switch-track-width); height: var(--silk-switch-track-height); min-height: var(--silk-switch-track-height); padding: var(--silk-switch-track-padding); border-radius: var(--silk-switch-border-radius, 9999px); background-color: var(--silk-switch-track-background-color); transition: background-color 150ms ease 0s; box-sizing: content-box; }.silk-switch-track:hover:not([aria-disabled="true"]) { cursor: pointer; }.silk-switch-thumb { width: var(--silk-switch-track-height); height: var(--silk-switch-track-height); border-radius: var(--silk-switch-border-radius, 9999px); background-color: rgb(255, 255, 255); translate: var(--silk-switch-thumb-offset); transition: translate 150ms ease 0s; }.tabs-tab-row { width: 100%; border-bottom: var(--silk-tab-border-thickness, 2px) solid var(--silk-tab-border-color); }.tabs-tab { cursor: pointer; transition: background-color 200ms ease 0s, color 200ms ease 0s, border-color 200ms ease 0s; background-color: var(--silk-tab-background-color); color: var(--silk-tab-color); user-select: none; padding: 0.5rem; margin-bottom: calc(-1 * var(--silk-tab-border-thickness, 2px)); border-bottom: var(--silk-tab-border-thickness, 2px) solid var(--silk-tab-border-color); }.tabs-tab[aria-disabled="true"] { background-color: var(--silk-tab-disabled-background-color); cursor: not-allowed; }.tabs-tab:hover:not([aria-disabled="true"]) { background-color: var(--silk-tab-hover-background-color); }.tabs-tab:active:not([aria-disabled="true"]) { background-color: var(--silk-tab-pressed-background-color); }.tabs-panel { padding: 1rem; width: 100%; flex-grow: 1; overflow-y: auto; }.silk-toc { list-style-type: none; text-align: start; padding: 0rem; }.silk-tooltip-arrow { position: absolute; border-width: 5px; border-style: solid; }.silk-tooltip { position: relative; background-color: var(--silk-tooltip-background-color); color: var(--silk-tooltip-color); border-radius: 6px; }.tooltip-text { padding: 5px; }@media not all and (min-width: 30rem) {  .silk-display-if-sm { display: none; }}@media not all and (min-width: 48rem) {  .silk-display-if-md { display: none; }}@media not all and (min-width: 62rem) {  .silk-display-if-lg { display: none; }}@media not all and (min-width: 80rem) {  .silk-display-if-xl { display: none; }}@media (min-width: 30rem) {  .silk-display-until-sm { display: none; }}@media (min-width: 48rem) {  .silk-display-until-md { display: none; }}@media (min-width: 62rem) {  .silk-display-until-lg { display: none; }}@media (min-width: 80rem) {  .silk-display-until-xl { display: none; }}@media (min-width: 62rem) {  .wave { margin: 0px; }}@media (min-width: 48rem) {  .wave { margin: 40px 0px 0px; }}@media (min-width: 30rem) {  .wave { margin: 50px 0px 0px; }}.send-button:hover { background-color: rgb(133, 127, 149); }@media (min-width: 0px) {  .result { width: 100px; }}@media (min-width: 48rem) {  .result { width: 150px; }}@media (min-width: 0px) {  .result-link { font-size: small; padding: 10px; }}@media (min-width: 48rem) {  .result-link { font-size: medium; font-weight: 500; padding: 15px 20px; }}.main-heading { font-family: poppins; font-weight: bold; color: rgb(12, 46, 95); }@media (min-width: 0px) {  .main-heading { font-size: medium; }}@media (min-width: 48rem) {  .main-heading { font-size: x-large; }}.heading { font-family: poppins; font-weight: 600; color: rgb(255, 77, 109); }@media (min-width: 0px) {  .heading { font-size: medium; }}@media (min-width: 48rem) {  .heading { font-size: x-large; }}.heading-value { font-family: poppins; color: rgb(0, 0, 0); }@media (min-width: 0px) {  .heading-value { font-size: medium; }}@media (min-width: 48rem) {  .heading-value { font-size: large; }}@media (min-width: 0px) {  .event-basic-details-container { width: 90%; }}@media (min-width: 48rem) {  .event-basic-details-container { width: 75%; }}@media (min-width: 48rem) {  .event-basic-details1-container { margin: 150px 0px; }}.heading1 { font-family: poppins; font-size: x-large; font-weight: 600; color: rgb(255, 77, 109); }.headingvalue1 { font-family: poppins; font-size: medium; color: rgb(0, 0, 0); }@media (min-width: 0px) {  .event-complete-details-container { width: 90%; }}@media (min-width: 48rem) {  .event-complete-details-container { width: 75%; }}.reg-button { background-color: rgb(255, 255, 255); color: rgb(39, 31, 127); transition: backgroundColor 2s ease 0s; }.reg-button:hover { background-color: rgb(147, 141, 214); color: rgb(255, 255, 255); }@media (min-width: 0px) {  .qrstyle { width: 100px; height: 100px; margin: 0px 60px 0px 0px; }}@media (min-width: 48rem) {  .qrstyle { width: 150px; height: 150px; margin: 0px 90px 0px 0px; }}@media (min-width: 0px) {  .poster { height: 250px; margin: 0px 0px 20px; }}@media (min-width: 48rem) {  .poster { height: 350px; margin: 0px 0px 30px; }}.poster:hover { animation: 1s ease-in-out 0s 1 normal none running swing; }.poster-style1 { overflow: hidden; animation: 20s ease-in-out 0s infinite normal none running swing1; }@media (min-width: 0px) {  .poster-style1 { width: 350px; height: 350px; margin: 20vh 0px 0px; }}@media (min-width: 48rem) {  .poster-style1 { width: 525px; height: 525px; margin: 25vh 0px 0px; }}.poster-style2 { overflow: hidden; animation: 20s ease-in-out 0s infinite normal none running swing1; }@media (min-width: 0px) {  .poster-style2 { width: 350px; height: 350px; margin: 20vh 0px 0px; }}@media (min-width: 48rem) {  .poster-style2 { width: 525px; height: 525px; margin: 20vh 0px 0px; }}@media (min-width: 0px) {  .titlestyle { font-size: x-large; }}@media (min-width: 48rem) {  .titlestyle { font-size: xx-large; }}@media (min-width: 0px) {  .ticket1style { width: 350px; }}@media (min-width: 48rem) {  .ticket1style { width: 525px; }}@media (min-width: 0px) {  .ticket1-underlinestyle { width: 250px; }}@media (min-width: 48rem) {  .ticket1-underlinestyle { width: 425px; }}@media (min-width: 0px) {  .eventcardstyle { width: 90%; }}@media (min-width: 48rem) {  .eventcardstyle { width: 75%; }}.leftcardstyle { background-color: rgb(39, 31, 127); }@media (min-width: 0px) {  .leftcardstyle { height: 100px; width: 100%; }}@media (min-width: 48rem) {  .leftcardstyle { height: 185px; width: 40%; }}@media (min-width: 0px) {  .date { font-size: xx-large; }}@media (min-width: 48rem) {  .date { font-size: 60px; }}.event-card { padding: 20px; }@media (min-width: 0px) {  .event-card { width: 90%; }}@media (min-width: 62rem) {  .event-card { width: 75%; }}.event-card:hover { box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 20px 10px; }@media (min-width: 48rem) {  .date-container { width: 200px; }}@media (min-width: 0px) {  .date-container { width: 100%; padding: 20px 0px; }}@media (min-width: 48rem) {  .event-info { max-width: 500px; row-gap: 10px; }}@media (min-width: 0px) {  .event-info { width: 100%; row-gap: 10px; }}@media (min-width: 48rem) {  .button { right: 10px; }}@media (min-width: 0px) {  .about-us-container { width: 90%; }}@media (min-width: 62rem) {  .about-us-container { width: 55%; }}.back-to-top { transition: rotate 300ms ease 0s; }.title { font-family: poppins; font-size: x-large; font-weight: bold; color: rgb(255, 255, 255); }@media (min-width: 0px) {  .title { margin: 20px 0px; }}@media (min-width: 62rem) {  .title { margin: 40px 0px; }}.title-style1 { font-family: poppins; font-size: x-large; font-weight: 600; color: rgb(255, 255, 255); margin: 40px 0px; }.title-style2 { font-family: poppins; font-size: large; font-weight: 600; color: rgb(255, 255, 255); }.data { font-family: poppins; font-size: medium; color: rgb(255, 255, 255); }.social-link-icon-link { color: rgb(255, 255, 255); }@media (min-width: 0px) {  .contact-section-container { padding: 40px 20px; }}@media (min-width: 62rem) {  .contact-section-container { padding: 40px; }}.menu-item-style2 { color: rgb(255, 255, 255); }.menu-item-style2:hover { transition: backgroundColor 1s ease 0s; background-color: rgb(147, 141, 214); }.header-background2 { background-color: rgb(255, 255, 255); }.sub-menu-item-style2 { color: rgb(255, 255, 255); }.sub-menu-item-style2:hover { transition: backgroundColor 1s ease 0s; color: rgb(0, 0, 0); background-color: rgb(236, 239, 248); }.menu-item { color: rgb(255, 255, 255); border: 2px solid rgb(39, 31, 127); border-radius: 25px; }.menu-item:hover { border: 2px solid rgb(255, 255, 255); border-radius: 25px; }.header-background { width: 100%; background-color: rgb(39, 31, 127); }.sub-menu-item { color: rgb(39, 31, 127); }.sub-menu-item:hover { transition: backgroundColor 1s ease 0s; background-color: rgb(39, 31, 127); color: rgb(255, 255, 255); }.event-box:hover { transform: translateY(50px); }@media (min-width: 0px) {  .event-poster { width: 200px; height: 200px; }}@media (min-width: 48rem) {  .event-poster { width: 300px; height: 300px; }}@media (min-width: 0px) {  .updates_-container { width: 80%; }}@media (min-width: 48rem) {  .updates_-container { width: 75%; }}@media (min-width: 0px) {  .updates_-box { width: 100%; }}@media (min-width: 48rem) {  .updates_-box { width: 70%; }}.updates_text_ { font-family: poppins; text-align: center; font-size: medium; font-weight: 600; }@media (min-width: 0px) {  .what-we-do { width: 90%; }}@media (min-width: 48rem) {  .what-we-do { width: 80%; }}@media (min-width: 62rem) {  .what-we-do { width: 75%; }}@media (min-width: 0px) {  .group-pic { width: 400px; }}@media (min-width: 48rem) {  .group-pic { width: 500px; }}@media (min-width: 0px) {  .whatwedo-title { font-size: x-large; }}@media (min-width: 48rem) {  .whatwedo-title { font-size: large; }}@media (min-width: 0px) {  .whatwedo-desc { font-weight: 500; }}@media (min-width: 48rem) {  .whatwedo-desc { font-weight: 600; }}@media (min-width: 0px) {  .v_logo { width: 200px; }}@media (min-width: 62rem) {  .v_logo { width: 300px; }}@media (min-width: 0px) {  .team-container { width: 90%; }}@media (min-width: 48rem) {  .team-container { width: 75%; }}.team-card > #columAlign > #container > #cover { visibility: hidden; }.team-card:hover > #columAlign > #container > #cover { visibility: visible; }.team-card:hover > #columAlign > #container > #pic { transition: transform 1s ease 0s; transform: scale(1.2); }.team-card > #columAlign > #container > #linksContainer > #linkedIn { visibility: hidden; }.team-card:hover > #columAlign > #container > #linksContainer > #linkedIn { visibility: visible; animation: 1s ease 0s 1 normal none running spin; }.team-card > #columAlign > #container > #linksContainer > #gitHub { visibility: hidden; }.team-card:hover > #columAlign > #container > #linksContainer > #gitHub { visibility: visible; animation: 1s ease 0s 1 normal none running spin; }.team-card > #columAlign > #container > #linksContainer > #mail { visibility: hidden; }.team-card:hover > #columAlign > #container > #linksContainer > #mail { visibility: visible; animation: 1s ease 0s 1 normal none running spin; }.team-card > #columAlign > #container > #linksContainer > #insta { visibility: hidden; }.team-card:hover > #columAlign > #container > #linksContainer > #insta { visibility: visible; animation: 1s ease 0s 1 normal none running spin; }.team-card > #columAlign > #container > #linksContainer > #twitter { visibility: hidden; }.team-card:hover > #columAlign > #container > #linksContainer > #twitter { visibility: visible; animation: 1s ease 0s 1 normal none running spin; }.social-links { padding: 10px; border: 2px solid rgb(255, 255, 255); }.social-links:hover { border-color: rgb(147, 141, 214); background-color: rgb(147, 141, 214); border-radius: 0px 5px; }.social-media-icon { color: rgb(255, 255, 255); }.silk-image.silk-image-fit-width { width: 100%; object-fit: scale-down; }.silk-link.silk-link-uncolored:link { color: var(--silk-color); }.silk-link.silk-link-uncolored:visited { color: var(--silk-color); }.silk-link.silk-link-undecorated:hover { text-decoration-line: none; }.silk-simple-grid.silk-simple-grid-base-1 { grid-template-columns: repeat(1, 1fr); }.silk-simple-grid.silk-simple-grid-base-2 { grid-template-columns: repeat(2, 1fr); }.silk-simple-grid.silk-simple-grid-base-3 { grid-template-columns: repeat(3, 1fr); }.silk-simple-grid.silk-simple-grid-base-4 { grid-template-columns: repeat(4, 1fr); }.silk-simple-grid.silk-simple-grid-base-5 { grid-template-columns: repeat(5, 1fr); }@media (min-width: 30rem) {  .silk-simple-grid.silk-simple-grid-sm-1 { grid-template-columns: repeat(1, 1fr); }}@media (min-width: 30rem) {  .silk-simple-grid.silk-simple-grid-sm-2 { grid-template-columns: repeat(2, 1fr); }}@media (min-width: 30rem) {  .silk-simple-grid.silk-simple-grid-sm-3 { grid-template-columns: repeat(3, 1fr); }}@media (min-width: 30rem) {  .silk-simple-grid.silk-simple-grid-sm-4 { grid-template-columns: repeat(4, 1fr); }}@media (min-width: 30rem) {  .silk-simple-grid.silk-simple-grid-sm-5 { grid-template-columns: repeat(5, 1fr); }}@media (min-width: 48rem) {  .silk-simple-grid.silk-simple-grid-md-1 { grid-template-columns: repeat(1, 1fr); }}@media (min-width: 48rem) {  .silk-simple-grid.silk-simple-grid-md-2 { grid-template-columns: repeat(2, 1fr); }}@media (min-width: 48rem) {  .silk-simple-grid.silk-simple-grid-md-3 { grid-template-columns: repeat(3, 1fr); }}@media (min-width: 48rem) {  .silk-simple-grid.silk-simple-grid-md-4 { grid-template-columns: repeat(4, 1fr); }}@media (min-width: 48rem) {  .silk-simple-grid.silk-simple-grid-md-5 { grid-template-columns: repeat(5, 1fr); }}@media (min-width: 62rem) {  .silk-simple-grid.silk-simple-grid-lg-1 { grid-template-columns: repeat(1, 1fr); }}@media (min-width: 62rem) {  .silk-simple-grid.silk-simple-grid-lg-2 { grid-template-columns: repeat(2, 1fr); }}@media (min-width: 62rem) {  .silk-simple-grid.silk-simple-grid-lg-3 { grid-template-columns: repeat(3, 1fr); }}@media (min-width: 62rem) {  .silk-simple-grid.silk-simple-grid-lg-4 { grid-template-columns: repeat(4, 1fr); }}@media (min-width: 62rem) {  .silk-simple-grid.silk-simple-grid-lg-5 { grid-template-columns: repeat(5, 1fr); }}@media (min-width: 80rem) {  .silk-simple-grid.silk-simple-grid-xl-1 { grid-template-columns: repeat(1, 1fr); }}@media (min-width: 80rem) {  .silk-simple-grid.silk-simple-grid-xl-2 { grid-template-columns: repeat(2, 1fr); }}@media (min-width: 80rem) {  .silk-simple-grid.silk-simple-grid-xl-3 { grid-template-columns: repeat(3, 1fr); }}@media (min-width: 80rem) {  .silk-simple-grid.silk-simple-grid-xl-4 { grid-template-columns: repeat(4, 1fr); }}@media (min-width: 80rem) {  .silk-simple-grid.silk-simple-grid-xl-5 { grid-template-columns: repeat(5, 1fr); }}.silk-surface.silk-surface-animated-color { transition: background-color 200ms ease 0s; }.silk-surface.silk-surface-animated-color div { transition: background-color 200ms ease 0s; }.silk-toc.silk-toc-bordered { border-radius: 5px; border: 1px solid var(--silk-toc-border-color); padding: 1rem; }.silk-tooltip-arrow.silk-tooltip-arrow-top-left { margin: -9px 0px 0px 9px; top: 0px; border-color: transparent transparent var(--silk-tooltip-background-color) transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-top { margin: -9px 0px 0px -5px; left: 50%; top: 0px; border-color: transparent transparent var(--silk-tooltip-background-color) transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-top-right { margin: -9px 9px 0px 0px; right: 0px; top: 0px; border-color: transparent transparent var(--silk-tooltip-background-color) transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-left-top { margin: 9px 0px 0px -9px; left: 0px; top: 0px; border-color: transparent var(--silk-tooltip-background-color) transparent transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-left { margin: -5px 0px 0px -9px; left: 0px; top: 50%; border-color: transparent var(--silk-tooltip-background-color) transparent transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-left-bottom { margin: 0px 0px 9px -9px; left: 0px; bottom: 0px; border-color: transparent var(--silk-tooltip-background-color) transparent transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-right-top { margin: 9px -9px 0px 0px; right: 0px; top: 0px; border-color: transparent transparent transparent var(--silk-tooltip-background-color); }.silk-tooltip-arrow.silk-tooltip-arrow-right { margin: -5px -9px 0px 0px; right: 0px; top: 50%; border-color: transparent transparent transparent var(--silk-tooltip-background-color); }.silk-tooltip-arrow.silk-tooltip-arrow-right-bottom { margin: 0px -9px 9px 0px; right: 0px; bottom: 0px; border-color: transparent transparent transparent var(--silk-tooltip-background-color); }.silk-tooltip-arrow.silk-tooltip-arrow-bottom-left { margin: 0px 0px -9px 9px; left: 0px; bottom: 0px; border-color: var(--silk-tooltip-background-color) transparent transparent transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-bottom { margin: 0px 0px -9px -5px; left: 50%; bottom: 0px; border-color: var(--silk-tooltip-background-color) transparent transparent transparent; }.silk-tooltip-arrow.silk-tooltip-arrow-bottom-right { margin: 0px 9px -9px 0px; right: 0px; bottom: 0px; border-color: var(--silk-tooltip-background-color) transparent transparent transparent; }</style>
+   <div class="silk-surface silk-smooth-color kobweb-box kobweb-align-top-start" style="min-height: 100vh;">
+    <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%; overflow: hidden;">
+     <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="row-gap: 30px;">
+      <div class="header-background kobweb-row kobweb-arrange-space-between kobweb-align-center-vert" style="overflow: hidden; position: fixed; padding: 15px 0px; z-index: 5;">
+       <img class="silk-image" style="cursor: pointer; margin: 0px 0px 0px 30px; width: 40px; height: 40px;" src="/VIDYADAAN_LOGO.png" alt="">
+       <div class="silk-display-if-lg kobweb-row kobweb-arrange-start kobweb-align-center-vert" style="margin: 0px 50px 0px 0px;">
+        <nav>
+         <span class="silk-span-text menu-item" style="padding: 10px 30px; cursor: pointer;">Home</span>
+        </nav>
+        <nav>
+         <span class="silk-span-text menu-item" style="padding: 10px 30px; cursor: pointer;">Team</span>
+        </nav>
+        <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz">
+         <div class="menu-item kobweb-row kobweb-arrange-start kobweb-align-center-vert" style="padding: 10px 30px; column-gap: 10px; cursor: pointer;">
+          <span class="silk-span-text" style="font-family: poppins;">Events</span><span class="fas fa-caret-down fa-sm"></span>
+         </div>
+         <div class="kobweb-box kobweb-align-top-start" style="display: none;"></div>
+        </div>
+        <nav>
+         <span class="silk-span-text menu-item" style="padding: 10px 30px; cursor: pointer;">Contact Us</span>
+        </nav>
+       </div><span class="silk-display-until-lg fas fa-bars fa-lg" style="margin: 0px 50px 0px 0px; cursor: pointer; color: rgb(255, 255, 255);"></span>
+      </div>
+      <div class="kobweb-box kobweb-align-bottom-center" style="width: 100%; z-index: 1;">
+       <img class="silk-image" style="width: 100vw; height: 80vh; object-fit: cover; overflow: hidden;" src="/grouppic_1.jpg" alt="">
+       <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div><span class="silk-span-text" style="font-family: poppins; font-size: x-large; font-weight: bold; color: rgb(255, 255, 255); margin: 0px 0px 40px;">Vidyadaan Club of GVPCE(A)</span>
+      </div><span class="silk-span-text" style="font-family: poppins; font-size: x-large; font-weight: bold; color: rgb(72, 22, 148);">Vidyadaan Team</span>
+      <div class="kobweb-box kobweb-align-center" style="width: 100%;">
+       <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%;">
+        <div class="silk-display-if-lg kobweb-row kobweb-arrange-start kobweb-align-top" style="padding: 20px; background-color: rgb(247, 235, 253);">
+         <span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(255, 255, 255); background-color: rgb(147, 141, 214);">All</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Core Team</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Web Designing</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Documentation</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Designing</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Coordinators</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Organising</span><span class="silk-span-text" style="padding: 20px 30px; font-family: poppins; cursor: pointer; font-size: medium; transition: backgroundColor 1s ease 0s; color: rgb(39, 31, 127); background-color: rgb(247, 235, 253);">Public Relations</span>
+        </div><select class="silk-display-until-lg" style="width: 260px; height: 35px; color: rgb(255, 255, 255); border: 0px; background-color: rgb(39, 31, 127);" id="dp"><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="1">All</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="2">Core Team</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="3">Web Designing</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="4">Documentation</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="5">Designing</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="6">Coordinators</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="7">Organising</option><option style="font-family: poppins; font-size: medium; margin: 20px 0px;" value="8">Public Relations</option></select>
+        <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; row-gap: 40px;">
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Core Team</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.linkedin.com/in/sai-nirmal-8b7127224/" id="linkedIn"><span class="social-media-icon fab fa-linkedin-in fa-xl"></span></a><a class="silk-link social-links" href="sainirmalkothuri@gmail.com" id="mail"><span class="social-media-icon far fa-envelope fa-xl"></span></a><a class="silk-link social-links" href="https://www.instagram.com/dead_deal013/" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/CoreTeam/Nirmal.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">K.Sai Nirmal</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">President</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com/tanusree_5/" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/CoreTeam/Tanusree.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">M.Tanusree</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Secretary</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com/im____tarun/" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/CoreTeam/Tarun.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">P.Tharun Venkat</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Treasurer</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Web Designing</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.linkedin.com/in/b-v-n-s-s-karthikeya-tumpudi-58b013249/" id="linkedIn"><span class="social-media-icon fab fa-linkedin-in fa-xl"></span></a><a class="silk-link social-links" href="https://github.com/tumpudikarthikeya" id="gitHub"><span class="social-media-icon fab fa-github fa-xl"></span></a><a class="silk-link social-links" href="tumpudibhanu@gmail.com" id="mail"><span class="social-media-icon far fa-envelope fa-xl"></span></a><a class="silk-link social-links" href="https://www.instagram.com/bhanu._.karthikeya/" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/WebDesigning/karthikeya_cse.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Karthikeya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/WebDesigning/Ramya.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Ramya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Documentation</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Documentation/Akshaya.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">K.Akshaya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Documentation/Sriya.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">K.Sriya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Documentation/Balaji.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">P.Balaji</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Documentation/Lokesh.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Ch.Lokesh Naidu</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Designing</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Designing/Charan.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">S.Charan</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Designing/NikhilaPriya.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">P.Nikhila Krishna Priya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Designing/SnehithaSai.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">B.Snehitha Sai</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Event Coordinators</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/EventCoordinators/Yashaswini.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">D.Yashaswini Kameswari</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/EventCoordinators/Bandhavi.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">A.Sri Bandhavi</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/EventCoordinators/Krishna.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">MSS Krishna Raju</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/EventCoordinators/Nithya.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">G.Sai Sree Nithya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Branch Coordinators</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/BranchCoordinators/Imran.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Sayyed Imran</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/BranchCoordinators/Sowjanya.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">D.Sowjanya</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/BranchCoordinators/Madhuri.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">G.Venkata Madhuri</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Organising</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/Namratha.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">K.Namratha Sri Chand</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/Vipin.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">K.Vipin</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/YogeshWarRao.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">P.Yogeshwar Rao</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com/sai_jaswanth_ch/" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/Jaswanth.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Ch.Sai Jaswanth</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com/mohan_swaraj_/" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/Swaraj.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Mohan Swaraj</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/PurnaBavani.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">M. Purna Bavani</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/VenkataSatyaBala.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">P.Venkata Satya Bala</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/Yashaswini.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Sivadanam Yashaswini</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/Organizing/SaiYashwanth.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">J.Shai Yashwanth</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="team-container kobweb-box kobweb-align-center" style="margin: 80px 0px; background-color: rgba(247, 235, 253, 0.5);">
+          <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" style="width: 100%; height: 100%;">
+           <span class="silk-span-text" style="font-family: poppins; font-size: x-large; color: rgb(21, 98, 205); font-weight: 600;">Public Relations</span>
+           <div class="kobweb-box kobweb-align-top-start" style="height: 2px; width: 100px; background-color: rgb(255, 211, 1);"></div>
+           <div class="silk-simple-grid silk-simple-grid-base-1 silk-simple-grid-md-2 silk-simple-grid-lg-3">
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/PublicRelations/MaryJones.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">B.Mary Jones</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/PublicRelations/Kusuma.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">P.Kusuma</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Lead</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/PublicRelations/Kesava.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Kesava Reddy</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/PublicRelations/HariHaran.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">Hari Haran</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+            <div class="team-card kobweb-box kobweb-align-center" style="border-radius: 10px; background-color: rgb(147, 141, 214); margin: 20px;" id="mainbox">
+             <div class="kobweb-col kobweb-arrange-top kobweb-align-center-horiz" id="columAlign">
+              <div class="kobweb-box kobweb-align-center" style="height: 320px; overflow: hidden;" id="container">
+               <div class="kobweb-row kobweb-arrange-start kobweb-align-top" style="column-gap: 20px; z-index: 2;" id="linksContainer">
+                <a class="silk-link social-links" href="https://www.instagram.com//" id="insta"><span class="social-media-icon fab fa-instagram fa-xl"></span></a>
+               </div>
+               <div class="kobweb-box kobweb-align-center" style="width: 100%; height: 100%;">
+                <img class="silk-image" style="width: 100%; height: 100%; object-fit: cover;" src="/TeamMembers/PublicRelations/Vamsi.jpg" alt="" id="pic">
+               </div>
+               <div class="kobweb-box kobweb-align-top-start" style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1;" id="cover"></div>
+              </div><span class="silk-span-text" style="padding: 20px 0px 0px; font-size: medium; color: rgb(255, 255, 255);">V.Sri Krishna Vamsi</span><span class="silk-span-text" style="padding: 0px 0px 20px; font-size: medium; font-weight: 600; color: rgb(255, 255, 255);">Coordinator</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="kobweb-box kobweb-align-top-start" style="height: 100%; width: 100%; pointer-events: none;">
+      <div class="kobweb-col kobweb-arrange-bottom kobweb-align-end" style="width: 100%; height: 100%; position: fixed; z-index: 5; pointer-events: none;">
+       <div class="back-to-top kobweb-box kobweb-align-center" style="width: 50px; height: 50px; visibility: hidden; border-radius: 30px; margin: 0px 40px 40px 0px; background-color: rgb(2, 102, 102); opacity: 0.5; cursor: pointer; pointer-events: auto;">
+        <span class="fas fa-arrow-up fa-lg" style="color: rgb(255, 255, 255);"></span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> 
+  <script src="/vidyadaan.js"></script> 
+ </body>
+</html>

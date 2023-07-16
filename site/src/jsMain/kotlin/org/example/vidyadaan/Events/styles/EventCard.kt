@@ -1,5 +1,7 @@
 package org.example.vidyadaan.Events.styles
 
+import com.example.compose.Primary
+import com.example.compose.Secondary
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -25,7 +27,7 @@ val Eventcardstyle by ComponentStyle {
 val Leftcardstyle by ComponentStyle {
     base {
         Modifier
-            .backgroundColor(rgb(72, 22, 148))
+            .backgroundColor(Primary)
     }
     Breakpoint.ZERO{
         Modifier.height(100.px)

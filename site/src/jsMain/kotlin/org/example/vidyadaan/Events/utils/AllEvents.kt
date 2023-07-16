@@ -1,38 +1,28 @@
 package org.example.vidyadaan.Events.utils
 
-import org.example.vidyadaan.Events.BasicDetails
 import org.example.vidyadaan.Events.EventDetails
+import org.example.vidyadaan.Events.models.*
 
 object AllEvents {
     val AllEvents :Map<Int,List<EventDetails>> = mapOf(
-        2023 to listOf(
-                    EventDetails( title = "Expression of Love",
-                    subtitle = mothersday.mothersday_subtitle,
-                    description = mothersday.mothersday_desc,
-                    intro = mothersday.mothersday_intro,
-                    details = mothersday.mothersday_basicdetails,
-                    poster = mothersday.mothersday_poster,
-                    link = mothersday.mothersday_link,
-                    results = mothersday.mothersday_results),
-
-                    EventDetails( title = "Expression of Love",
-                        subtitle = "Share your mother’s day message",
-                        description = mothersday.mothersday_desc,
-                        intro = mothersday.mothersday_intro,
-                        details = mothersday.mothersday_basicdetails,
-                        poster = mothersday.mothersday_poster,
-                        link = mothersday.mothersday_link,
-                        results = mothersday.mothersday_results)
-            ),
-        2022 to listOf(
-            EventDetails( title = "Gamers of Math",
-                subtitle = "A series of events on the eve of math day" ,
-                description ="" ,
-                intro ="" ,
-                details = BasicDetails("","","","","","") ,
-                poster = "",
-                link =""
-                    )
-            )
+        2023 to listOf( mothers_day,),
+        2022 to listOf( mathday ,
+                        stress_management ,
+                        Climate_Change ,
+                        Teachers_day,
+                        Independence_day,
+                        Blood_donation,
+                        poster_making,
+                        Find_me_an_echo,
+                        Energy_swaraj_yatra,
+                        Sikshith_Bharat,
+                        Agnipath_Scheme,
+                        Sign_Language) ,
+        2021 to listOf(Fund_Raising_Event1,
+                        Untie_Riddles,
+                        Vocubulary_with_Vidhyadhan,
+                        Vignaan_Through_Vidyadaan,
+                        Vignanic_Sammelan,
+                        National_Technology_Day)
     )
  }

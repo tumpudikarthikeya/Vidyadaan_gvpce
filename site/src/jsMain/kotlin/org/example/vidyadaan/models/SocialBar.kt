@@ -45,6 +45,7 @@ fun SocialLinks() {
         FaLinkedin(size = IconSize.XL,
             modifier = SocialLinkIconLink.toModifier())
     }
+    /*
     Link(path = FB_ID,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB)
     {
@@ -56,6 +57,6 @@ fun SocialLinks() {
     {
         FaTwitter(size = IconSize.XL,
             modifier = SocialLinkIconLink.toModifier())
-    }
+    }*/
 
 }

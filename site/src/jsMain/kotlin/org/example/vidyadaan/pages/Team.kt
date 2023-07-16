@@ -19,6 +19,7 @@ import org.example.vidyadaan.Styles.HeaderBackground
 import org.example.vidyadaan.Styles.MenuItemStyle
 import org.example.vidyadaan.Styles.SubMenuItemStyle
 import org.example.vidyadaan.Team.sections.VidyadaanTeam
+import org.example.vidyadaan.components.BackToTop
 import org.example.vidyadaan.components.Header
 import org.example.vidyadaan.components.OverFlowMenu
 import org.jetbrains.compose.web.css.*
@@ -28,7 +29,8 @@ import org.jetbrains.compose.web.css.*
 fun Team() {
     val ctx = rememberPageContext()
     var menuOpend by remember { mutableStateOf(false) }
-    Box(modifier = Modifier.fillMaxSize() , contentAlignment = Alignment.Center) {
+    Box(modifier = Modifier.fillMaxSize().overflow(Overflow.Hidden)
+        , contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.rowGap(30.px)) {
             Header(ctx, MenuItemStyle, SubMenuItemStyle, HeaderBackground, onMenuClicked = { menuOpend = true })
@@ -44,6 +46,8 @@ fun Team() {
                     .color(rgb(72, 22, 148)))
             VidyadaanTeam()
         }
+
+        BackToTop()
 
     }
 }

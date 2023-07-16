@@ -1,6 +1,10 @@
 package org.example.vidyadaan.Team.sections
 
 import androidx.compose.runtime.*
+import com.example.compose.Pale_Purple
+import com.example.compose.Primary
+import com.example.compose.Secondary
+import com.example.compose.White_Color
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontSize
@@ -28,7 +32,6 @@ import org.example.vidyadaan.Team.utils.displayTeam
 import org.example.vidyadaan.models.Constants.Teams_Names
 import org.example.vidyadaan.models.Teams_Tab
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
 import org.jetbrains.compose.web.css.s
 import org.jetbrains.compose.web.dom.Option
 import org.jetbrains.compose.web.dom.Select
@@ -38,7 +41,7 @@ fun VidyadaanTeam() {
     Box(modifier = Modifier.fillMaxWidth() , contentAlignment = Alignment.Center) {
         var selectedTeam by remember { mutableStateOf(1) }
         Column(modifier = Modifier.fillMaxWidth() , horizontalAlignment = Alignment.CenterHorizontally) {
-            Row(modifier = Modifier.padding(20.px).backgroundColor(rgb(246, 243, 249)).displayIf(Breakpoint.LG)) {
+            Row(modifier = Modifier.padding(20.px).backgroundColor(Pale_Purple).displayIf(Breakpoint.LG)) {
                 Teams_Tab.values().forEach { team ->
                     SpanText(text = team.team_name,
                         modifier = Modifier
@@ -48,8 +51,8 @@ fun VidyadaanTeam() {
                             .fontSize(FontSize.Medium)
                             .onClick { selectedTeam = team.id }
                             .transition(CSSTransition("backgroundColor", duration = 1.s))
-                            .color(if (selectedTeam == team.id) Colors.White else rgb(72, 22, 148))
-                            .backgroundColor(if (selectedTeam == team.id) rgb(72, 22, 148) else rgb(246, 243, 249))
+                            .color(if (selectedTeam == team.id) White_Color else Primary)
+                            .backgroundColor(if (selectedTeam == team.id) Secondary else Pale_Purple)
                     )
                 }
             }
@@ -60,7 +63,7 @@ fun VidyadaanTeam() {
                 .displayUntil(Breakpoint.LG)
                 .color(Colors.White)
                 .border(0.px)
-                .backgroundColor(rgb(72, 22, 148))
+                .backgroundColor(Primary)
                 .id("dp")
                 .toAttrs {
                     onInput {

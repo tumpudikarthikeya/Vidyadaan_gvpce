@@ -25,24 +25,24 @@ import org.jetbrains.compose.web.css.px
 fun EventBasicDetails( details: BasicDetails) {
 
     Column(modifier = EventBasicDetailsContainer.toModifier()) {
-        Row {
+        Row(verticalAlignment = Alignment.CenterVertically) {
             SpanText(text = "Date : " , modifier = heading.toModifier())
             SpanText(text = "${details.date} ${details.month} , ${details.year}" , modifier = headingValue.toModifier())
         }
         if (details.time != ""){
-            Row {
+            Row(verticalAlignment = Alignment.CenterVertically) {
                 SpanText(text = "Time : ", modifier = heading.toModifier())
                 SpanText(text = details.time!!, modifier = headingValue.toModifier())
             }
         }
         if (details.platform != ""){
-            Row {
+            Row(verticalAlignment = Alignment.CenterVertically) {
                 SpanText(text = "Platform : ", modifier = heading.toModifier())
                 SpanText(text = details.platform!!, modifier = headingValue.toModifier())
             }
         }
         if (details.venue != ""){
-            Row {
+            Row(verticalAlignment = Alignment.CenterVertically) {
                 SpanText(text = "Venue : ", modifier = heading.toModifier())
                 SpanText(text = details.venue!!, modifier = headingValue.toModifier())
             }

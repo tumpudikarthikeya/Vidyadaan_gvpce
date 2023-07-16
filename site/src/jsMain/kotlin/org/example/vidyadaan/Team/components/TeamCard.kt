@@ -1,7 +1,11 @@
 package org.example.vidyadaan.Team.components
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.*
+import com.example.compose.Secondary
+import com.varabyte.kobweb.compose.css.FontSize
+import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.ObjectFit
+import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
@@ -20,13 +24,17 @@ import org.example.vidyadaan.Team.styles.TeamCardStyle
 import org.example.vidyadaan.Team.styles.socialLinksStyle
 import org.example.vidyadaan.Team.styles.socialMediaIcon
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
 import org.jetbrains.compose.web.css.rgba
-import org.jetbrains.compose.web.dom.A
 
 @Composable
 fun TeamCard(details: TeamDetails) {
-    Box(modifier = TeamCardStyle.toModifier().backgroundColor(rgb(72, 22, 148)).margin(20.px).id("mainbox") , contentAlignment = Alignment.Center) {
+    Box(modifier = TeamCardStyle
+        .toModifier()
+        .borderRadius(10.px)
+        .backgroundColor(Secondary)
+        .margin(20.px)
+        .id("mainbox")
+        , contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally
         , modifier = Modifier.id("columAlign"))  {
             Box(contentAlignment = Alignment.Center , modifier = Modifier.height(320.px).id("container").overflow(Overflow.Hidden)) {
@@ -48,8 +56,12 @@ fun TeamCard(details: TeamDetails) {
             }
             SpanText(text = details.name ,
                 modifier = Modifier
-                    .padding(topBottom = 20.px)
-                    .fontFamily("poppins")
+                    .padding(top = 20.px)
+                    .fontSize(FontSize.Medium)
+                    .color(Colors.White))
+            SpanText(text = details.position ,
+                modifier = Modifier
+                    .padding(bottom = 20.px)
                     .fontSize(FontSize.Medium)
                     .fontWeight(FontWeight.SemiBold)
                     .color(Colors.White))

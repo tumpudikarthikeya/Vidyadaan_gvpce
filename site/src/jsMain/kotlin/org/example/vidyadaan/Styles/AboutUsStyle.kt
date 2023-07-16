@@ -11,7 +11,7 @@ val aboutUsContainer by ComponentStyle {
         Modifier
             .fillMaxWidth(90.percent)
     }
-    Breakpoint.MD {
+    Breakpoint.LG {
         Modifier
             .fillMaxWidth(55.percent)
     }

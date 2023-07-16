@@ -19,23 +19,23 @@ import org.jetbrains.compose.web.dom.*
 
 @Composable
 fun ImageCarousel() {
-    Div(attrs = Modifier.id("Example")
+    Div(attrs = Modifier.id("HomeImages")
         .classNames("carousel","slide")
         .attrsModifier { attr("data-bs-ride","carousel")
         attr("data-interval","2000") }.toAttrs()) {
 
         Ol(attrs = Modifier.classNames("carousel-indicators").columnGap(10.px).toAttrs()) {
             Button(attrs = Modifier.attrsModifier {
-                attr("data-bs-target", "#Example")
+                attr("data-bs-target", "#HomeImages")
                 attr("data-bs-slide-to", "0")
             }.classNames("active").toAttrs())
-            Button( attrs = Modifier.attrsModifier { attr("data-bs-target","#Example")
+            Button( attrs = Modifier.attrsModifier { attr("data-bs-target","#HomeImages")
                 attr("data-bs-slide-to","1")}.toAttrs())
-            Button( attrs = Modifier.attrsModifier { attr("data-bs-target","#Example")
+            Button( attrs = Modifier.attrsModifier { attr("data-bs-target","#HomeImages")
                 attr("data-bs-slide-to","2")}.toAttrs())
         }
             Div(attrs = Modifier.classNames("carousel-inner").toAttrs()) {
-                Box(modifier = Modifier.classNames("carousel-item", "active" )) {
+                Div(attrs = Modifier.classNames("carousel-item", "active" ).toAttrs()) {
                     ImageWithCover("grouppic_1.jpg")
                     Div(attrs = Modifier.classNames("carousel-caption").toAttrs()){
                         SpanText(text = "Vidyadaan Club of GVPCE(A)" ,
@@ -47,17 +47,17 @@ fun ImageCarousel() {
                     }
                 }
                 Div(attrs = Modifier.classNames("carousel-item").toAttrs()) {
-                    ImageWithCover("grouppic2.jpg")
+                    ImageWithCover("Logo_Banner.png")
                 }
                 Div(attrs = Modifier.classNames("carousel-item").toAttrs()) {
-                    ImageWithCover("grouppic_1.jpg")
+                    ImageWithCover("grouppic_2.jpg")
                 }
 
 
             }
 
         Button( attrs = Modifier.classNames("carousel-control-prev")
-            .attrsModifier { attr("data-bs-target","#Example")
+            .attrsModifier { attr("data-bs-target","#HomeImages")
             attr("data-bs-slide" ,"prev")} .toAttrs()) {
             Span(attrs = Modifier.classNames("carousel-control-prev-icon")
                 .attrsModifier { attr("aria-hidden","true")}.toAttrs()){
@@ -68,7 +68,7 @@ fun ImageCarousel() {
 
         }
         Button( attrs = Modifier.classNames("carousel-control-next")
-            .attrsModifier { attr("data-bs-target","#Example")
+            .attrsModifier { attr("data-bs-target","#HomeImages")
                 attr("data-bs-slide" ,"next")} .toAttrs()) {
             Span(attrs = Modifier.classNames("carousel-control-next-icon")
                 .attrsModifier { attr("aria-hidden","true")}.toAttrs())

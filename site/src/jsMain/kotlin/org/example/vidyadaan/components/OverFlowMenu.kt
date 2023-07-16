@@ -1,6 +1,8 @@
 package org.example.vidyadaan.components
 
 import androidx.compose.runtime.*
+import com.example.compose.Primary
+import com.example.compose.Secondary
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -51,7 +53,7 @@ fun OverFlowMenu(onMenuClosed : () -> Unit) {
     Column(
         modifier = Modifier
             .zIndex(5)
-            .backgroundColor(rgb(72, 22, 148))
+            .backgroundColor(Primary)
             .height(100.vh)
             .width(100.vw)
             .position(Position.Fixed)
@@ -69,7 +71,6 @@ fun OverFlowMenu(onMenuClosed : () -> Unit) {
             .margin(bottom = 20.px)) {
         P(
             attrs = Modifier
-                .fontFamily("poppins")
                 .fontSize(20.px)
                 .margin(right = 10.px)
                 .fontWeight(FontWeight.Bold)
@@ -104,7 +105,6 @@ fun OverFlowMenu(onMenuClosed : () -> Unit) {
                             }
                         }
                         .padding(topBottom = 10.px , leftRight = 30.px)
-                        .fontFamily("poppins")
                         .fontSize(FontSize.Medium)
                         .cursor(Cursor.Pointer))
             }
@@ -131,7 +131,7 @@ fun OverflowMenuWithSubMenu(
     MenuStyle: ComponentStyle
 ) { var clicked by remember { mutableStateOf(false) }
     Column( horizontalAlignment = Alignment.CenterHorizontally ,
-        modifier = Modifier.backgroundColor(if(clicked) rgb(50, 10, 114) else rgb(72, 22, 148))) {
+        modifier = Modifier.backgroundColor(if(clicked) Secondary else Primary)) {
         Row(verticalAlignment = Alignment.CenterVertically,
             modifier = MenuItemStyle2.toModifier()
                 .cursor(Cursor.Pointer)
@@ -158,7 +158,6 @@ fun OverflowMenuWithSubMenu(
                         modifier = SubMenuStyle.toModifier()
                             .padding(topBottom = 8.px, leftRight = 40.px)
                             .onClick { ctx.router.navigateTo("${subitem.path}/${subitem.subMenu}") }
-                            .fontFamily("poppins")
                             .fontSize(FontSize.Medium)
                             .cursor(Cursor.Pointer))
                 }
