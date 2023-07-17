@@ -16,7 +16,7 @@ val path = "/TeamMembers/Designing/"
     val Lead1= TeamDetails("S.Charan" ,
         "${path}Charan.jpg" ,
         SocialMediaDetails(
-            instaId = "${Constants.INSTAURL}/bhanu._.karthikeya/")
+            instaId = "${Constants.INSTAURL}/")
     )
     val Coordinator1= TeamDetails("P.Nikhila Krishna Priya" ,
         "${path}NikhilaPriya.jpg" ,
