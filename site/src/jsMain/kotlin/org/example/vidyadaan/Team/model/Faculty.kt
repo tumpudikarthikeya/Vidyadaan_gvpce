@@ -25,7 +25,7 @@ object FacultyMembers {
     val Faculty2= TeamDetails("Dr.C.V.Nageswara Rao" ,
         "${path}Nageswara_Rao.jpg" ,
         SocialMediaDetails(
-            mail = "20131A04L9@gvpce.ac.in"),
+            mail = "cvnr74@gvpce.ac.in"),
         "Associate Director-CFSR"
     )
     val PRINCIPAL= TeamDetails("Prof.Dr.A.B.Koteswara Rao" ,

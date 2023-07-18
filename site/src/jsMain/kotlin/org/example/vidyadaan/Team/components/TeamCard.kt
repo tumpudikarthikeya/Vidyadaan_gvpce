@@ -13,6 +13,7 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.*
@@ -25,6 +26,7 @@ import org.example.vidyadaan.Team.styles.socialLinksStyle
 import org.example.vidyadaan.Team.styles.socialMediaIcon
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgba
+import org.jetbrains.compose.web.dom.A
 
 @Composable
 fun TeamCard(details: TeamDetails) {
@@ -96,10 +98,9 @@ fun SocialIcons(details: TeamDetails) {
         }
 
         if (details.socialMedia.mail != "") {
-            Link(
-                path = details.socialMedia.mail,
-                openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
-                modifier = socialLinksStyle.toModifier().id("mail")
+            A(
+                href = "mailto:${details.socialMedia.mail}",
+                attrs  = socialLinksStyle.toModifier().id("mail").toAttrs()
             ) {
                 FaEnvelope(size = IconSize.XL, modifier = socialMediaIcon.toModifier())
             }
