@@ -26,6 +26,7 @@ import org.example.vidyadaan.Team.model.Designing.designingTeam
 import org.example.vidyadaan.Team.model.Documentation.documentationTeam
 import org.example.vidyadaan.Team.model.EventCoordinators.eventCoordinatorsTeam
 import org.example.vidyadaan.Team.model.EventOrganizers.eventOrganizersTeam
+import org.example.vidyadaan.Team.model.Faculty
 import org.example.vidyadaan.Team.model.PublicRelations.publicRelationsTeam
 import org.example.vidyadaan.Team.model.WebDesigning.webDesigningTeam
 import org.example.vidyadaan.Team.utils.displayTeam
@@ -67,7 +68,7 @@ fun VidyadaanTeam() {
                 .id("dp")
                 .toAttrs {
                     onInput {
-                        selectedTeam = it.value!!.toInt() ?: 1
+                        selectedTeam = it.value!!.toInt()
 
                         }
                     }
@@ -97,6 +98,7 @@ fun Display_Team( selectedTeam :Int) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         if (selectedTeam == 1) {
+            displayTeam(team = Faculty.FacultyTeam)
             displayTeam(Teams_Names[1], coreTeam[2023]!!)
             displayTeam(Teams_Names[2], webDesigningTeam[2023]!!)
             displayTeam(Teams_Names[3], documentationTeam[2023]!!)
