@@ -16,10 +16,14 @@ import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
+import com.varabyte.kobweb.navigation.OpenLinkStrategy
+import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
+import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
+import org.example.vidyadaan.Events.utils.path
 import org.example.vidyadaan.Styles.*
 import org.example.vidyadaan.models.Constants.address
 import org.example.vidyadaan.models.Constants.contactname_1
@@ -68,6 +72,10 @@ fun details() {
         }
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Link( path="https://www.coolseotools.com/website-visitor-counter"
+                    , openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB ) {
+                Image(src ="https://www.coolseotools.com/website-visitor-counter/count/&style=style6&show=p&num=5&uid=ot"  , desc = "AtoZSEOTools Web Counter" )
+            }
             SpanText(
                 "ContactInfo",
                 modifier = TitleStyle1.toModifier()
