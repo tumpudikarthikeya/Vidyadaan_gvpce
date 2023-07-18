@@ -14,7 +14,6 @@ import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.example.vidyadaan.EventDetails.style.RegButtonStyle
 import org.example.vidyadaan.Team.model.CoreTeam
-import org.example.vidyadaan.Team.model.Faculty
 import org.example.vidyadaan.Team.utils.displayTeam
 import org.example.vidyadaan.components.SectionHeader
 import org.jetbrains.compose.web.css.px
@@ -25,8 +24,7 @@ fun OurTeam(ctx : PageContext) {
     Box(modifier = Modifier.fillMaxWidth().margin(topBottom = 50.px)) {
         Column(modifier = Modifier.fillMaxWidth() , horizontalAlignment = Alignment.CenterHorizontally) {
             SectionHeader("Our Team")
-            displayTeam(team = Faculty.FacultyTeam)
-            displayTeam( CoreTeam.coreTeam[2023]!!)
+            displayTeam(2023, CoreTeam.coreTeam[2023]!!)
             Button(attrs = RegButtonStyle.toModifier()
                 .padding(topBottom = 15.px  , leftRight = 20.px)
                 .onClick {  ctx.router.navigateTo("/team") }

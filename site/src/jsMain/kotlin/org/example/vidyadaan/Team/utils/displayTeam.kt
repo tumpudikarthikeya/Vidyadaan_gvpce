@@ -20,7 +20,7 @@ import org.jetbrains.compose.web.css.rgb
 import org.jetbrains.compose.web.css.rgba
 
 @Composable
-fun displayTeam(year : Any = "" , team : List<TeamDetails> = listOf()) {
+fun displayTeam(year : Any , team : List<TeamDetails> = listOf()) {
 
     Box(modifier = TeamContainer.toModifier()
         .margin(topBottom = 80.px)
@@ -28,16 +28,12 @@ fun displayTeam(year : Any = "" , team : List<TeamDetails> = listOf()) {
     , contentAlignment = Alignment.Center) {
         Column( modifier = Modifier.fillMaxSize() ,horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            if(year != "") {
-                SpanText(
-                    text = "$year",
-                    modifier = Modifier
-                        .fontFamily("poppins")
-                        .fontSize(FontSize.XLarge)
-                        .color(rgb(21, 98, 205))
-                        .fontWeight(FontWeight.SemiBold)
-                )
-            }
+            SpanText(text = "$year" ,
+                modifier = Modifier
+                    .fontFamily("poppins")
+                    .fontSize(FontSize.XLarge)
+                    .color(rgb(21, 98, 205))
+                    .fontWeight(FontWeight.SemiBold))
             Box(modifier = Modifier.height(2.px).width(100.px).backgroundColor(rgb(255,211,1)))
             SimpleGrid(numColumns(base = 1 , lg = 3, md = 2)) {
                 team.forEach {
