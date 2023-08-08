@@ -5,6 +5,6 @@ enum class HeaderContent(val pagename : String, val path : String ,val subMenu: 
     Home("Home" , "/" ,0),
     Team("Team" , "/team",0),
     Events("Events" , "/events",1),
-    //Gallery("Gallery" , "/gallery",0),
+    CareerGuidance("Career Guidance" , "/careerGuidance",0),
     ContactUs("Contact Us", "/contact_us",0)
 }
