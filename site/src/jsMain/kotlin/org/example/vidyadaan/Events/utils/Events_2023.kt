@@ -21,3 +21,12 @@ object mothersday {
     const val mothersday_results = "${path2023}mothersday_2023_results.png"
 }
 
+/*
+object careerGuidance1 {
+    const val cg1_poster =""
+    const val cg1_link =""
+    const val cg1_desc = ""
+    const val cg_subtitle =""
+    val cg1_basicdetails = BasicDetails("09","August","2023", platform = "Offline", venue = "ZPHS , Madhurawada")
+}
+*/

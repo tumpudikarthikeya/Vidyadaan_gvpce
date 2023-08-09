@@ -108,7 +108,7 @@ fun ContactForm() {
                             .attrsModifier {
                                 attr("placeholder", "Email Address")
                                 attr("name", "email")
-                                attr("required", "true")
+                                //attr("required", "true")
                             }
                             .toAttrs()
                     )

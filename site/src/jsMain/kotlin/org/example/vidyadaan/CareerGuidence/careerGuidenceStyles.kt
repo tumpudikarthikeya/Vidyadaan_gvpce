@@ -37,6 +37,15 @@ val pinkGradient = Modifier
             Color.rgb(0xff6e7f), Color.rgb(0xbfe9ff))
     )
 
+val threeColorGradient  = Modifier
+    .backgroundImage(
+        linearGradient(LinearGradient.Direction.ToRight) {
+            add(Color.rgb(0xc6ffdd))
+            add(Color.rgb(0xfbd786))
+            add(Color.rgb(0xf7797d))
+        }
+    )
+
 val streamBoxStyle by ComponentStyle {
     base {
         Modifier
