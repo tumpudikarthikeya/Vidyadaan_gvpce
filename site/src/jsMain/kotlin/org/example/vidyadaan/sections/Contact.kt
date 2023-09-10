@@ -42,13 +42,13 @@ fun ContactInfo() {
         , contentAlignment = Alignment.Center) {
         Column(modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally) {
-            Link( path="https://www.coolseotools.com/website-visitor-counter"
+            /*Link( path="https://www.coolseotools.com/website-visitor-counter"
                 , openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB ) {
                 Image(
                     src = "https://www.coolseotools.com/website-visitor-counter/count/&style=style6&show=p&num=5&uid=ot",
                     desc = "AtoZSEOTools Web Counter"
                 )
-            }
+            }*/
             SpanText("Contact Us" ,
                 modifier = TitleStyle.toModifier()
             )

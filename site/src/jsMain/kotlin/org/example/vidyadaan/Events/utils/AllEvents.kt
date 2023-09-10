@@ -5,7 +5,7 @@ import org.example.vidyadaan.Events.models.*
 
 object AllEvents {
     val AllEvents :Map<Int,List<EventDetails>> = mapOf(
-        2023 to listOf( mothers_day,),
+        2023 to listOf( Career_Guidance,mothers_day,),
         2022 to listOf( mathday ,
                         stress_management ,
                         Climate_Change ,

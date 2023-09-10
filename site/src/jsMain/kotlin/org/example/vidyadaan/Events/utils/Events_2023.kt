@@ -21,12 +21,11 @@ object mothersday {
     const val mothersday_results = "${path2023}mothersday_2023_results.png"
 }
 
-/*
+
 object careerGuidance1 {
-    const val cg1_poster =""
-    const val cg1_link =""
-    const val cg1_desc = ""
-    const val cg_subtitle =""
+    const val cg1_poster ="${path2023}CareerGuidance_1.jpg"
+    const val cg1_intro ="Vidyadaan Club of GVPCE (A) planned to conduct a series of career guidance events and successfully completed one of the session for 10th class students."
+    const val cg1_desc = "Vidyadaan Club of GVPCE (A) conducted career guidance🎓 event for 10th class students👥 at ZPHS 🏫,  Madhurawada." + "We Provided insights for students about ✨the carrer options available after 10th class like Polytechnic,  Intermediate,  Short term courses , paramedical , ITI💫 .And we motivated the students to pursue their dreams & aspirations and to work hard to achieve them💥."
+    const val cg1_subtitle ="Vidyadaan Club of GVPCE (A) conducted career guidance🎓 event for 10th class students👥 at ZPHS 🏫,  Madhurawada. "
     val cg1_basicdetails = BasicDetails("09","August","2023", platform = "Offline", venue = "ZPHS , Madhurawada")
 }
-*/

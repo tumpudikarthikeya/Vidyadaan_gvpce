@@ -36,7 +36,7 @@ fun ImageCarousel() {
         }
             Div(attrs = Modifier.classNames("carousel-inner").toAttrs()) {
                 Div(attrs = Modifier.classNames("carousel-item", "active" ).toAttrs()) {
-                    ImageWithCover("grouppic_1.jpg")
+                    ImageWithCover("/Events/2023/CareerGuidance_1.jpg")
                     Div(attrs = Modifier.classNames("carousel-caption").toAttrs()){
                         SpanText(text = "Vidyadaan Club of GVPCE(A)" ,
                             modifier = Modifier
@@ -50,7 +50,7 @@ fun ImageCarousel() {
                     ImageWithCover("Logo_Banner.png")
                 }
                 Div(attrs = Modifier.classNames("carousel-item").toAttrs()) {
-                    ImageWithCover("grouppic_2.jpg")
+                    ImageWithCover("grouppic_1.jpg")
                 }
 
 
