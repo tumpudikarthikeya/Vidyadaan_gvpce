@@ -36,28 +36,35 @@ import org.jetbrains.compose.web.dom.Nav
 
 @Composable
 fun Header(ctx: PageContext, MenuStyle:ComponentStyle, SubMenuStyle:ComponentStyle, HeaderStyle:ComponentStyle, onMenuClicked:() -> Unit) {
-    Row(modifier = HeaderStyle.toModifier()
-        .overflow(Overflow.Hidden)
-        .position(Position.Fixed)
-        .padding(topBottom = 15.px)
-        .zIndex(5) ,
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.SpaceBetween) {
-        Logo(ctx)
-        Row( modifier = Modifier.displayIf(Breakpoint. LG).margin(right = 50.px)
-            , verticalAlignment = Alignment.CenterVertically) {
-            RightPart(ctx,MenuStyle,SubMenuStyle)
+    Column(modifier = Modifier.fillMaxWidth().position(Position.Fixed).zIndex(5)) {
+        Row(
+            modifier = HeaderStyle.toModifier()
+                .overflow(Overflow.Hidden)
+                //.position(Position.Fixed)
+                .padding(topBottom = 15.px)
+                //.zIndex(5)
+            ,
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Logo(ctx)
+            Row(
+                modifier = Modifier.displayIf(Breakpoint.LG).margin(right = 50.px),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                RightPart(ctx, MenuStyle, SubMenuStyle)
+            }
+
+            FaBars(size = IconSize.LG,
+                modifier = Modifier
+                    .margin(right = 50.px)
+                    .cursor(Cursor.Pointer)
+                    .color(Colors.White)
+                    .displayUntil(Breakpoint.LG)
+                    .onClick { onMenuClicked() })
         }
-
-        FaBars(size = IconSize.LG ,
-            modifier = Modifier
-                .margin(right = 50.px)
-                .cursor(Cursor.Pointer)
-                .color(Colors.White )
-                .displayUntil(Breakpoint.LG)
-                .onClick { onMenuClicked()})
+        recruitment()
     }
-
 }
 
 

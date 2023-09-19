@@ -4,8 +4,10 @@ import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
@@ -29,10 +31,11 @@ fun HomePage() {
             .fillMaxWidth()
             .rowGap(100.px)
         , horizontalAlignment = Alignment.CenterHorizontally) {
-            Header(ctx, MenuItemStyle, SubMenuItemStyle, HeaderBackground, onMenuClicked = { menuOpend = true })
+                Header(ctx, MenuItemStyle, SubMenuItemStyle, HeaderBackground, onMenuClicked = { menuOpend = true })
             if (menuOpend){
                 OverFlowMenu(onMenuClosed = { menuOpend = false })
             }
+            //recruitment()
             ImageCarousel()
             Updates()
             AboutUs()
